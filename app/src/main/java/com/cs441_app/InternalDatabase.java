@@ -15,7 +15,7 @@ public class InternalDatabase extends SQLiteOpenHelper {
     public static final String COL_0 = "COLOR0";
     public static final String COL_1 = "COLOR1";
     public static final String COL_2 = "COLOR2";
-    public static final String COL_3 = "COLOR30";
+    public static final String COL_3 = "COLOR3";
 
     public InternalDatabase(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -23,7 +23,7 @@ public class InternalDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate (SQLiteDatabase db){
-        db.execSQL("CREATE TABLE "+ TABLE_NAME + "(COLOR0 TEXT, COLOR1 TEXT, COLOR2 TEXT, COLOR30 TEXT )");
+        db.execSQL("CREATE TABLE "+ TABLE_NAME + "(COLOR0 TEXT, COLOR1 TEXT, COLOR2 TEXT, COLOR3 TEXT )");
     }
 
     @Override
